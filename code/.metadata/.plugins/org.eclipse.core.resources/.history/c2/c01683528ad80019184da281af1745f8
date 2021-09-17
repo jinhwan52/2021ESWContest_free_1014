@@ -1,0 +1,97 @@
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+
+#include <stdio.h>
+#include <unistd.h>
+#include "system.h"
+#include <io.h>
+#include "altera_avalon_pio_regs.h"
+
+/* function prototypes */
+void VGA_box (int, int, int, int, short);
+
+// virtual to real address pointers
+//volatile unsigned int * vga_pixel_ptr = NULL ;
+//void *vga_pixel_virtual_base;
+
+int main()
+{
+	//volatile short* pixel_buffer = (short *) VIDEO_PIXEL_BUFFER_DMA_0_BASE;
+	printf("111Hello from Nios II!\n");
+	IOWR(LEDS_BASE, 0, 0b1111);
+	//int count = 0;
+	//int delay;
+
+	//vga_pixel_ptr =(unsigned int *)(vga_pixel_virtual_base);
+
+	//*pixel_buffer = 0;
+
+	//// clear the screen
+	VGA_box (0, 0, 159, 119, 0x0);		// VGA 320 x 240 but now 160 x 120
+	printf("Line2\n");
+	VGA_box (0, 0, 50, 50, 0x07F);
+
+	printf("Line3\n");
+	//// x1 y1 x2 y2	320x240
+	//VGA_box (33*4, 28*4, 49*4, 32*4, 0x187F);
+	//VGA_box (100, 210, 300, 220, 0xffe0);
+
+
+	/*while(1)
+	  {
+		  //IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, count & 0x01);
+
+		IOWR(LEDS_BASE, 0, count & 0x1);
+		  delay = 0;
+		  while(delay < 20000)
+			  {
+			  delay++;
+			  }
+		  count++;
+	  }*/
+
+
+  return 0;
+}
+
+/****************************************************************************************
+ * Draw a filled rectangle on the VGA monitor
+****************************************************************************************/
+void VGA_box(int x1, int y1, int x2, int y2, short pixel_color)
+{
+	int offset, row, col;
+	volatile short* pixel_buffer = (short *) 0x8000000;
+
+	/* assume that the box coordinates are valid */
+	for (row = y1; row <= y2; row++)
+		for (col = x1; col <= x2; ++col)
+		{
+			offset =  (row << 10) + (col << 1);
+			// set pixel color
+			*(pixel_buffer+offset) = pixel_color;
+		}
+	/*for (row = y1; row <= y2; row++)
+	{
+		col = x1;
+		while (col <= x2)
+		{
+			offset = (row <<10) + (col << 1);
+			*(pixel_buffer + offset) = pixel_color;
+			++col;
+		}
+	}*/
+	//printf("finish \n");
+}

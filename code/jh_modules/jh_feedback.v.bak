@@ -1,0 +1,12 @@
+module jh_PID(
+	input							reset_n,
+	input							cmd_adaptive,
+	input				[15:0] 	kp,
+	input				[15:0] 	ki,
+	input				[15:0] 	kd,
+	input				[15:0] 	sp,
+	input				[15:0] 	pv,
+	output			[15:0] 	o_un
+);
+
+endmodule

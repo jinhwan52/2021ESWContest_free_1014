@@ -1,0 +1,9 @@
+15:37:31 **** Incremental Build of configuration Nios II for project pixel_test ****
+make all 
+Info: Building ../pixel_test_bsp/
+C:/intelFPGA_lite/16.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../pixel_test_bsp/
+[BSP build complete]
+[pixel_test build complete]
+
+15:37:32 Build Finished (took 992ms)
+

@@ -1,0 +1,190 @@
+
+// jh_PE4FDTD(.clk(), .rst(), .global_comm(), .n1_top(), .n1_bottom(), .out_n1())
+module jh_PE4FDTD(
+	input 			clk,
+	input 			rst,
+	input				global_comm,
+	input 			n1_top,			// n-1 value from top PE
+	input				n1_bottom,		// n-1 value from bottom PE 
+	output [19:0]	out_n1
+);
+localparam 	four	=  20'b01000000100000000000,		//	4
+				three	=	20'b01000000010000000000,		// 3
+				two 	=  20'b01000000000000000000,	   // 2
+				one 	= 	20'b00111111100000000000,		// 1
+				zero  =  20'b00000000000000000000;		// 0
+	
+	reg [19:0] init_value2 [3:0];
+	initial begin 
+		init_value2[0] = three;
+		init_value2[1] = zero;
+		init_value2[2] = zero;
+		init_value2[3] = four;
+	
+	end
+	
+	///////////////////////
+	// Generate start
+	// Declare M10K for PE	
+	wire [19:0] data1;
+	wire [19:0]	q1;
+	wire [1:0] addr1;
+	wire we1;
+
+	M10K_20 mem_voltage(data1, addr1, we1, clk, q1);
+			
+	///////////////////////////////
+	// initialization
+	reg [19:0] 	init_data;
+	reg [1:0]  	init_addr;
+	reg 			init_we;
+	reg			init_ack;
+	reg [3:0] 	current_state, next_state;
+	
+	always @(negedge clk) begin
+		if(rst) begin
+			current_state <= 0;
+			next_state <= 0;
+		end
+		else begin
+			current_state <= next_state;
+		end
+	end
+	
+	always @(posedge clk) begin
+		if(rst) begin
+			init_addr <= 0;
+			init_data <= init_value2[0];
+			init_we <= 0;
+			init_ack <= 1'b0;
+		end
+		if (current_state == 4'b0000 && global_comm == 0) begin	
+			init_we <= 1;				// Left value (at left address) of '<=' will be saved;
+			init_addr <= init_addr + 2'b1;
+			init_data <= init_value2[init_addr+2'b1];
+			next_state <= (init_addr == 2'b11) ? 4'b0001 : 4'b0000;
+		end
+		// Finishing initialization
+		if (current_state == 4'b0001) begin // Save data[end], and stop the save
+			init_we <= 0;
+			init_addr <= init_addr + 2'b1;
+			init_data <= init_value2[init_addr+2'b1];
+			init_ack <= 1'b1;
+		end	
+	end
+	///////////////////////////////
+	// FDTD computation
+	reg [19:0] 	vn;
+	reg [19:0] 	fdtd_data;
+	reg [1:0]  	fdtd_addr;
+	reg 			fdtd_we;
+	reg			fdtd_ack;
+	reg [3:0] 	current_state_fdtd, next_state_fdtd;
+	reg [19:0] 	V_right1, V_left1, V_center;
+	wire [19:0] V_top1, V_bottom1, r1, V_rz1;
+	
+	// FDTD computation unit
+	test_efield u1(clk, r1, V_right1, V_left1, V_top1, V_bottom1, V_rz1);	// takes 2 clocks.
+	
+	assign r1 = one;
+	assign V_top1 = n1_top;
+	assign V_bottom1 = n1_bottom;
+	
+	always @(negedge clk) begin
+		if(rst) begin
+			current_state_fdtd <= 0;
+			next_state_fdtd <= 0;
+		end
+		else begin
+			current_state_fdtd <= next_state_fdtd;
+		end
+	end
+	
+	always @(posedge clk) begin
+		if(rst) begin
+			fdtd_addr <= 0;
+			fdtd_data <= init_value2[0];
+			fdtd_ack <= 1'b0;
+			fdtd_we <= 0;
+		end
+		if (current_state_fdtd == 4'd0 && global_comm == 1) begin	
+			fdtd_we <= 0;				
+			next_state_fdtd <= 4'd1;
+		end
+		// Wait a cycle to read M10K data
+		if (current_state_fdtd == 4'd1) begin
+			next_state_fdtd <= 4'd2;
+		end
+		if (current_state_fdtd == 4'd2) begin
+			vn <= q1;
+			V_right1 <= vn;
+			V_center <= V_right1;
+			V_left1 <= V_center;
+			next_state_fdtd <= 4'd3;
+		end	
+		// Wait two cycles to compute laplace equation
+		if (current_state_fdtd == 4'd3) begin
+			next_state_fdtd <= 4'd4;
+		end
+		if (current_state_fdtd == 4'd4) begin
+			next_state_fdtd <= (fdtd_addr == 3) ? 4'd6 : 4'd5;
+		end
+		// Read next M10K data
+		if (current_state_fdtd == 4'd5) begin
+			fdtd_we <= 0;
+			fdtd_addr <= fdtd_addr + 2'b1;
+			next_state_fdtd <= 4'd1;
+		end
+		// Last node
+		if (current_state_fdtd == 4'd6) begin
+			V_right1 <= vn;
+			V_center <= V_right1;
+			V_left1 <= V_center;
+			next_state_fdtd <= 4'd7;
+		end
+		// Finishing computing laplace equation
+		if (current_state_fdtd == 4'd7) begin
+			fdtd_ack <= 1'b1;	 // two cycles later, the computing will be totally finised
+		end
+	end
+	
+	assign data1 = global_comm ? fdtd_data : init_data;
+	assign addr1 = global_comm ? fdtd_addr : init_addr;
+	assign we1   = global_comm ? fdtd_we : init_we;
+	
+	assign out_n1 = V_rz1;
+	
+endmodule
+
+// Quartus Prime Verilog Template
+// Single port RAM with single read/write address 
+module M10K_20 
+#(parameter DATA_WIDTH=20, parameter ADDR_WIDTH=2)
+(
+	input [(DATA_WIDTH-1):0] data,
+	input [(ADDR_WIDTH-1):0] addr,
+	input we, clk,
+	output [(DATA_WIDTH-1):0] q
+);
+
+	// Declare the RAM variable
+	reg [DATA_WIDTH-1:0] ram[2**ADDR_WIDTH-1:0] /* synthesis ramstyle = "no_rw_check, M10K" */;	
+
+	// Variable to hold the registered read address
+	reg [ADDR_WIDTH-1:0] addr_reg;
+
+	always @ (posedge clk)
+	begin
+		// Write
+		if (we)
+			ram[addr] <= data;
+
+		addr_reg <= addr;
+	end
+
+	// Continuous assignment implies read returns NEW data.
+	// This is the natural behavior of the TriMatrix memory
+	// blocks in Single Port mode.  
+	assign q = ram[addr_reg];
+
+endmodule

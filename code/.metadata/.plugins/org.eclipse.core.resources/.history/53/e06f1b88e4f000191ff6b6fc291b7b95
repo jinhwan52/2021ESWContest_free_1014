@@ -1,0 +1,119 @@
+/*
+ * main.c
+ *
+ *  Created on: 2019. 10. 17.
+ *      Author: owner
+ */
+/*
+ * "Hello World" example.
+ *
+ * This example prints 'Hello from Nios II' to the STDOUT stream. It runs on
+ * the Nios II 'standard', 'full_featured', 'fast', and 'low_cost' example
+ * designs. It runs with or without the MicroC/OS-II RTOS and requires a STDOUT
+ * device in your system's hardware.
+ * The memory footprint of this hosted application is ~69 kbytes by default
+ * using the standard reference design.
+ *
+ * For a reduced footprint version of this template, and an explanation of how
+ * to reduce the memory footprint for a given application, see the
+ * "small_hello_world" template.
+ *
+ */
+
+#include <stdio.h>
+#include <unistd.h>
+#include "system.h"
+#include <io.h>
+#include "altera_avalon_pio_regs.h"
+
+/* function prototypes */
+void VGA_box (int, int, int, int, short);
+void VGA_text (int, int, char *);
+
+// virtual to real address pointers
+//volatile unsigned int * vga_pixel_ptr = NULL ;
+//void *vga_pixel_virtual_base;
+
+int main()
+{
+
+	printf("111Hello from Nios II!\n");
+	IOWR(LEDS_BASE, 0, 0b1111);
+
+	VGA_text (0, 0, text_top_row);
+  	VGA_text (78, 59, text_bottom_row);		//80 characters by 60 lines, characters need 2 rooms.
+
+	//// clear the screen
+	VGA_box (0, 0, 679, 469, 0x0);		//
+	printf("Line2\n");
+	VGA_box (0, 0, 79, 60, 0x7F);
+	VGA_box (0, 0, 100, 100, 0x724);
+	IOWR(LEDS_BASE, 0, 0b1001);
+	//VGA_box (10, 10, 60, 60, 0x07F);
+
+	//printf("Line3\n");
+	//// x1 y1 x2 y2	320x240
+	//VGA_box (33*4, 28*4, 49*4, 32*4, 0x187F);
+	//VGA_box (100, 210, 300, 220, 0xffe0);
+
+
+	/*while(1)
+	  {
+		  //IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, count & 0x01);
+
+		IOWR(LEDS_BASE, 0, count & 0x1);
+		  delay = 0;
+		  while(delay < 20000)
+			  {
+			  delay++;
+			  }
+		  count++;
+	  }*/
+
+
+  return 0;
+}
+
+/****************************************************************************************
+ * Draw a filled rectangle on the VGA monitor
+****************************************************************************************/
+
+void VGA_box(int x1, int y1, int x2, int y2, short pixel_color)
+{
+	int offset, row, col;
+	volatile short* pixel_buffer = (short *) 0x8000000;
+
+
+
+	for (row = y1; row <= y2; row++)
+		for (col = x1; col <= x2; ++col)
+		{
+			//offset =  (row << 10) + (col << 1);			// Wrong
+			offset =  (row << 9) + col;						// True
+			// set pixel color
+			*(pixel_buffer+offset) = pixel_color;
+		}
+
+}
+
+void VGA_text(int x, int y, char * text_ptr)
+{
+	int offset;
+  	// volatile char * character_buffer = (char *) vga_char_ptr ;	// VGA character buffer
+	volatile char * character_buffer = (char *) 0x8000000 ;	// VGA character buffer
+
+	/* assume that the text string fits on one line */
+	offset = (y << 7) + x;
+	while ( *(text_ptr) )
+	{
+		// write to the character buffer
+		*(character_buffer + offset) = *(text_ptr);
+		++text_ptr;
+		++offset;
+	}
+}
+
+
+
+
+

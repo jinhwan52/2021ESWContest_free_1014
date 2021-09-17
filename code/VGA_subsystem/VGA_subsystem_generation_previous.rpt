@@ -1,0 +1,52 @@
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate D:\Graduate\6_Projects\Real_Time_FEM\FPGA\20200522_first\VGA_subsystem.qsys --synthesis=VERILOG --output-directory=D:\Graduate\6_Projects\Real_Time_FEM\FPGA\20200522_first\VGA_subsystem\synthesis --family="Cyclone V" --part=5CSEMA5F31C6
+Progress: Loading 20200522_first/VGA_subsystem.qsys
+Progress: Reading input file
+Progress: Adding Sys_Clk [clock_source 16.1]
+Progress: Parameterizing module Sys_Clk
+Progress: Adding VGA_PLL [altera_up_avalon_video_pll 16.1]
+Progress: Parameterizing module VGA_PLL
+Progress: Adding VGA_pixel_FIFO [altera_up_avalon_video_dual_clock_buffer 16.1]
+Progress: Parameterizing module VGA_pixel_FIFO
+Progress: Adding VGA_pixel_rgb_resampler [altera_up_avalon_video_rgb_resampler 16.1]
+Progress: Parameterizing module VGA_pixel_rgb_resampler
+Progress: Adding video_alpha_blender_0 [altera_up_avalon_video_alpha_blender 16.1]
+Progress: Parameterizing module video_alpha_blender_0
+Progress: Adding video_character_buffer_with_dma_0 [altera_up_avalon_video_character_buffer_with_dma 16.1]
+Progress: Parameterizing module video_character_buffer_with_dma_0
+Progress: Adding video_dual_clock_FIFO [altera_up_avalon_video_dual_clock_buffer 16.1]
+Progress: Parameterizing module video_dual_clock_FIFO
+Progress: Adding video_pixel_DMA [altera_up_avalon_video_pixel_buffer_dma 16.1]
+Progress: Parameterizing module video_pixel_DMA
+Progress: Adding video_vga_controller_0 [altera_up_avalon_video_vga_controller 16.1]
+Progress: Parameterizing module video_vga_controller_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Warning: VGA_subsystem.Sys_Clk: The input clock frequency must be known or set by the parent if this is a subsystem.
+Info: VGA_subsystem.VGA_pixel_rgb_resampler: RGB Resampling: 8 (bits) x 1 (planes) -> 10 (bits) x 3 (planes)
+Info: VGA_subsystem.video_character_buffer_with_dma_0: Character Resolution: 80 x 60
+Info: VGA_subsystem.video_vga_controller_0: Video Output Stream: Format: 640 x 480 with Color: 10 (bits) x 3 (planes) converted to 8 (bits) per color plane
+Info: VGA_subsystem: Generating VGA_subsystem "VGA_subsystem" for QUARTUS_SYNTH
+Info: VGA_PLL: "VGA_subsystem" instantiated altera_up_avalon_video_pll "VGA_PLL"
+Info: VGA_pixel_FIFO: Starting Generation of the Dual Clock Buffer
+Info: VGA_pixel_FIFO: "VGA_subsystem" instantiated altera_up_avalon_video_dual_clock_buffer "VGA_pixel_FIFO"
+Info: VGA_pixel_rgb_resampler: Starting Generation of Video RGB Resampler
+Info: VGA_pixel_rgb_resampler: "VGA_subsystem" instantiated altera_up_avalon_video_rgb_resampler "VGA_pixel_rgb_resampler"
+Info: video_alpha_blender_0: Starting Generation of the Alpha Blender
+Info: video_alpha_blender_0: "VGA_subsystem" instantiated altera_up_avalon_video_alpha_blender "video_alpha_blender_0"
+Info: video_character_buffer_with_dma_0: Starting Generation of Character Buffer
+Info: video_character_buffer_with_dma_0: "VGA_subsystem" instantiated altera_up_avalon_video_character_buffer_with_dma "video_character_buffer_with_dma_0"
+Info: video_dual_clock_FIFO: Starting Generation of the Dual Clock Buffer
+Info: video_dual_clock_FIFO: "VGA_subsystem" instantiated altera_up_avalon_video_dual_clock_buffer "video_dual_clock_FIFO"
+Info: video_pixel_DMA: Starting Generation of VGA Pixel Buffer
+Info: video_pixel_DMA: "VGA_subsystem" instantiated altera_up_avalon_video_pixel_buffer_dma "video_pixel_DMA"
+Info: video_vga_controller_0: Starting Generation of VGA Controller
+Info: video_vga_controller_0: "VGA_subsystem" instantiated altera_up_avalon_video_vga_controller "video_vga_controller_0"
+Info: rst_controller: "VGA_subsystem" instantiated altera_reset_controller "rst_controller"
+Info: video_pll: "VGA_PLL" instantiated altera_pll "video_pll"
+Info: reset_from_locked: "VGA_PLL" instantiated altera_up_avalon_reset_from_locked_signal "reset_from_locked"
+Info: VGA_subsystem: Done "VGA_subsystem" with 12 modules, 22 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,82 @@
+module jh_adc_rfsig(
+input							CLOCK_65,						// AD9248 uses 65 Mhz (65 MSPS)
+input							rst,
+input							start_write,
+input				[13:0]	monitor_ADC,		
+input				[15:0] 	sram_readdata,
+output	reg 	[15:0] 	sram_writedata,
+output	reg 	[6:0] 	sram_address,
+output	reg 				sram_write,
+output 	reg	[15:0] 	min_voltage,	
+output 	reg	[15:0] 	max_voltage,
+output			[3:0]		temp_var
+);
+
+localparam WAIT = 4'd0, WRITE = 4'd1, READ_SET = 4'd2, READ_WAIT = 4'd3, READ = 4'd4;
+
+
+reg [15:0] min_voltage_pre;
+reg [15:0] max_voltage_pre;
+
+reg [3:0] current_state;
+reg [3:0] next_state;
+
+always @(negedge CLOCK_65) begin
+	if (rst)
+		current_state <= WAIT;
+	else		
+		current_state <= next_state; 
+end
+
+always @(posedge CLOCK_65) begin
+	case(current_state)
+		WAIT: begin
+			if(start_write) begin
+				next_state <= WRITE;
+				sram_write <= 1;
+				sram_writedata <= {{2'b0}, monitor_ADC} ;
+				min_voltage <= 0;											// Reset MIN & MAX value befor read new voltage
+				max_voltage <= 0;
+			end
+			else begin
+				next_state <= WAIT;
+				sram_address <= 0;
+				sram_write <= 0;
+			end
+		end
+		// Write temperautre to SRAM.
+		WRITE: begin							
+			sram_address <= sram_address + 7'b1 ;
+			sram_writedata <= {{2'b0}, monitor_ADC} ;			// Monitor_ADC is 14 bits, SRAM is 16 bits.
+			sram_write <= (&sram_address) ? 1'b0 : 1'b1;
+			next_state <= (&sram_address) ? READ_SET : WRITE;
+		end
+		// Set up SRAM address to read SRAM data.
+		READ_SET: begin								
+			sram_write <= 0;
+			min_voltage_pre <= min_voltage;
+			max_voltage_pre <= max_voltage;
+			next_state <= READ_WAIT;
+		end
+		// Wait a cycle since read action requires two cycle.
+		READ_WAIT: begin
+			next_state <= READ;
+		end
+		// Read temperature in SRAM and find MAX & MIN.
+		READ: begin		
+			sram_write <= 0;
+			min_voltage <= (sram_address==0) ? sram_readdata :		// If min_voltage_pre == 0, min_voltage = sram_readdata
+								(min_voltage_pre < sram_readdata) ? min_voltage_pre : sram_readdata ;			
+			max_voltage <= (max_voltage_pre > sram_readdata) ? max_voltage_pre : sram_readdata ;
+			sram_address <= sram_address + 7'b1 ;
+			next_state <= (&sram_address) ? WAIT : READ_SET;
+		end
+				
+		default:	begin
+			next_state <= WAIT;
+		end
+		
+	endcase
+end
+
+endmodule

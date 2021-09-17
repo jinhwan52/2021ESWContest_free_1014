@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed Aug 25 14:59:46 2021
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : base_sdram
+Top-level Entity Name : DE1_SOC_golden_top
+Family : Cyclone V
+Device : 5CSEMA5F31C6
+Timing Models : Final
+Logic utilization (in ALMs) : 28,297 / 32,070 ( 88 % )
+Total registers : 17702
+Total pins : 366 / 457 ( 80 % )
+Total virtual pins : 0
+Total block memory bits : 156,166 / 4,065,280 ( 4 % )
+Total RAM Blocks : 41 / 397 ( 10 % )
+Total DSP Blocks : 51 / 87 ( 59 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 3 / 6 ( 50 % )
+Total DLLs : 1 / 4 ( 25 % )

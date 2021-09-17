@@ -1,0 +1,260 @@
+module jh_ADDA (
+						CLOCK_50,
+						ADC_CLK_A,
+						ADC_CLK_B,
+						ADC_DA,
+						ADC_DB,
+						ADC_OEB_A,
+						ADC_OEB_B,
+						ADC_OTR_A,
+						ADC_OTR_B,
+						DAC_CLK_A,
+						DAC_CLK_B,
+						DAC_DA,
+						DAC_DB,
+						DAC_MODE,
+						DAC_WRT_A,
+						DAC_WRT_B,
+						OSC_SMA_ADC4,
+						POWER_ON,
+						SMA_DAC4,
+						DAC_cnt
+						);
+
+input		          		CLOCK_50;
+
+output		          	ADC_CLK_A;
+output		          	ADC_CLK_B;
+input		    [13:0]		ADC_DA;
+input		    [13:0]		ADC_DB;
+output		          	ADC_OEB_A;
+output		          	ADC_OEB_B;
+input		          		ADC_OTR_A;
+input		          		ADC_OTR_B;
+output		          	DAC_CLK_A;
+output		          	DAC_CLK_B;
+output       [13:0]		DAC_DA;
+output		 [13:0]		DAC_DB;
+output		          	DAC_MODE;
+output		          	DAC_WRT_A;
+output		          	DAC_WRT_B;
+output		        		POWER_ON;
+output                  OSC_SMA_ADC4;
+output                  SMA_DAC4;
+
+input							DAC_cnt;
+
+//=======================================================
+//  REG/WIRE declarations
+//=======================================================
+
+//reg		 [13:0]		r_ADC_DA/*synthesis noprune*/;
+//reg		 [13:0]		r_ADC_DB/*synthesis noprune*/;
+	
+reg 		 [13:0]		clr_count;
+
+reg 		 [14:0]		DAC_out;
+
+wire		 [14:0]     modulated;
+wire		 [13:0]		sin_out;
+wire		sig_clr;
+
+//always @ (posedge CLK_65) r_ADC_DA <= ADC_DA;
+//always @ (posedge CLK_65) r_ADC_DB <= ADC_DB;
+
+reg [13:0] rom_memory [124:0];
+integer i;
+
+initial begin
+	i = 0;
+	rom_memory[0] = 8192; 
+	rom_memory[1] = 8603; 
+	rom_memory[2] = 9014; 
+	rom_memory[3] = 9422; 
+	rom_memory[4] = 9827; 
+	rom_memory[5] = 10229; 
+	rom_memory[6] = 10625; 
+	rom_memory[7] = 11015; 
+	rom_memory[8] = 11397; 
+	rom_memory[9] = 11772; 
+	rom_memory[10] = 12138; 
+	rom_memory[11] = 12493; 
+	rom_memory[12] = 12838; 
+	rom_memory[13] = 13171; 
+	rom_memory[14] = 13492; 
+	rom_memory[15] = 13799; 
+	rom_memory[16] = 14092; 
+	rom_memory[17] = 14370; 
+	rom_memory[18] = 14632; 
+	rom_memory[19] = 14879; 
+	rom_memory[20] = 15108; 
+	rom_memory[21] = 15320; 
+	rom_memory[22] = 15513; 
+	rom_memory[23] = 15689; 
+	rom_memory[24] = 15845; 
+	rom_memory[25] = 15982; 
+	rom_memory[26] = 16099; 
+	rom_memory[27] = 16197; 
+	rom_memory[28] = 16274; 
+	rom_memory[29] = 16331; 
+	rom_memory[30] = 16367; 
+	rom_memory[31] = 16382; 
+	rom_memory[32] = 16377; 
+	rom_memory[33] = 16351; 
+	rom_memory[34] = 16305; 
+	rom_memory[35] = 16238; 
+	rom_memory[36] = 16151; 
+	rom_memory[37] = 16043; 
+	rom_memory[38] = 15916; 
+	rom_memory[39] = 15769; 
+	rom_memory[40] = 15603; 
+	rom_memory[41] = 15419; 
+	rom_memory[42] = 15216; 
+	rom_memory[43] = 14995; 
+	rom_memory[44] = 14758; 
+	rom_memory[45] = 14503; 
+	rom_memory[46] = 14233; 
+	rom_memory[47] = 13947; 
+	rom_memory[48] = 13647; 
+	rom_memory[49] = 13333; 
+	rom_memory[50] = 13006; 
+	rom_memory[51] = 12667; 
+	rom_memory[52] = 12317; 
+	rom_memory[53] = 11956; 
+	rom_memory[54] = 11586; 
+	rom_memory[55] = 11207; 
+	rom_memory[56] = 10821; 
+	rom_memory[57] = 10427; 
+	rom_memory[58] = 10029; 
+	rom_memory[59] = 9625; 
+	rom_memory[60] = 9218; 
+	rom_memory[61] = 8809; 
+	rom_memory[62] = 8397; 
+	rom_memory[63] = 7986; 
+	rom_memory[64] = 7574; 
+	rom_memory[65] = 7165; 
+	rom_memory[66] = 6758; 
+	rom_memory[67] = 6354; 
+	rom_memory[68] = 5956; 
+	rom_memory[69] = 5562; 
+	rom_memory[70] = 5176; 
+	rom_memory[71] = 4797; 
+	rom_memory[72] = 4427; 
+	rom_memory[73] = 4066; 
+	rom_memory[74] = 3716; 
+	rom_memory[75] = 3377; 
+	rom_memory[76] = 3050; 
+	rom_memory[77] = 2736; 
+	rom_memory[78] = 2436; 
+	rom_memory[79] = 2150; 
+	rom_memory[80] = 1880; 
+	rom_memory[81] = 1625; 
+	rom_memory[82] = 1388; 
+	rom_memory[83] = 1167; 
+	rom_memory[84] = 964; 
+	rom_memory[85] = 780; 
+	rom_memory[86] = 614; 
+	rom_memory[87] = 467; 
+	rom_memory[88] = 340; 
+	rom_memory[89] = 232; 
+	rom_memory[90] = 145; 
+	rom_memory[91] = 78; 
+	rom_memory[92] = 32; 
+	rom_memory[93] = 6; 
+	rom_memory[94] = 1; 
+	rom_memory[95] = 16; 
+	rom_memory[96] = 52; 
+	rom_memory[97] = 109; 
+	rom_memory[98] = 186; 
+	rom_memory[99] = 284; 
+	rom_memory[100] = 401; 
+	rom_memory[101] = 538; 
+	rom_memory[102] = 694; 
+	rom_memory[103] = 870; 
+	rom_memory[104] = 1063; 
+	rom_memory[105] = 1275; 
+	rom_memory[106] = 1504; 
+	rom_memory[107] = 1751; 
+	rom_memory[108] = 2013; 
+	rom_memory[109] = 2291; 
+	rom_memory[110] = 2584; 
+	rom_memory[111] = 2891; 
+	rom_memory[112] = 3212; 
+	rom_memory[113] = 3545; 
+	rom_memory[114] = 3890; 
+	rom_memory[115] = 4245; 
+	rom_memory[116] = 4611; 
+	rom_memory[117] = 4986; 
+	rom_memory[118] = 5368; 
+	rom_memory[119] = 5758; 
+	rom_memory[120] = 6154; 
+	rom_memory[121] = 6556; 
+	rom_memory[122] = 6961; 
+	rom_memory[123] = 7369; 
+	rom_memory[124] = 7780; 
+end
+//=======================================================
+//  Structural coding
+//=======================================================
+
+/*
+always @(posedge CLK_125)
+begin
+		if(sig_clr == 1'b1)begin
+			clr_count <= 0;
+
+		end else begin
+			clr_count <= clr_count+1'b1;		//Unit function 
+			
+		end
+end
+
+assign sig_clr = (clr_count >= 124) ? 1'b1:1'b0;	
+assign DAC_DA = (clr_count >=  61) ? 0 :16383;			// Using at unit function
+*/
+pll  pll_ada (
+		.refclk   (CLOCK_50),   //  refclk.clk
+		.rst      (0),      //   reset.reset
+		.outclk_0 (CLK_125), // outclk0.clk
+		.outclk_1 (CLK_65) // outclk1.clk
+);
+
+always @(posedge CLK_125)
+begin
+		i = i + 1;
+		if(i == 125) i = 0;
+		if (DAC_cnt == 0) 
+			DAC_out = 8192;
+		else	begin
+		   
+			DAC_out = (rom_memory[i]*7)>>3; 
+		end 
+		
+end
+
+
+
+assign  DAC_WRT_B = ~CLK_125;      //Input write signal for PORT B
+assign  DAC_WRT_A = ~CLK_125;      //Input write signal for PORT A
+
+assign  DAC_MODE = 1; 		       //Mode Select. 1 = dual port, 0 = interleaved.
+
+assign  DAC_CLK_B = ~CLK_125; 	    //PLL Clock to DAC_B
+assign  DAC_CLK_A = ~CLK_125; 	    //PLL Clock to DAC_A
+ 
+assign  ADC_CLK_B = ~CLK_65;  	    //PLL Clock to ADC_B
+assign  ADC_CLK_A = ~CLK_65;  	    //PLL Clock to ADC_A
+
+
+assign  ADC_OEB_A = 0; 		  	    //ADC_OEA
+assign  ADC_OEB_B = 0; 			    //ADC_OEB
+
+
+assign  DAC_DA = DAC_out;	// A			// Using at ramp function
+//assign  DAC_DA = sin_out;
+//assign  DAC_DB = DAC_out;	// B
+
+
+assign  POWER_ON  = 1;            //Disable OSC_SMA
+
+endmodule

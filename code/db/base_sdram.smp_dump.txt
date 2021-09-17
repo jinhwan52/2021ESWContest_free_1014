@@ -1,0 +1,465 @@
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_1:mm_interconnect_1|altera_merlin_burst_adapter:onchip_ram2_s2_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_1:mm_interconnect_1|altera_merlin_burst_adapter:onchip_ram1_s2_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_1:mm_interconnect_1|altera_merlin_burst_adapter:sdram_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_1:mm_interconnect_1|altera_merlin_burst_adapter:fifo_hps_to_fpga_in_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_1:mm_interconnect_1|altera_merlin_burst_adapter:vga_subsystem_char_buffer_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|jh_PE4FDTD:gen_inst[11].pe|state_fdtd
+Name state_fdtd.1011 state_fdtd.1010 state_fdtd.1001 state_fdtd.1000 state_fdtd.0111 state_fdtd.0110 state_fdtd.0101 state_fdtd.0100 state_fdtd.0011 state_fdtd.0010 state_fdtd.0001 state_fdtd.0000 
+state_fdtd.0000 0 0 0 0 0 0 0 0 0 0 0 0 
+state_fdtd.0001 0 0 0 0 0 0 0 0 0 0 1 1 
+state_fdtd.0010 0 0 0 0 0 0 0 0 0 1 0 1 
+state_fdtd.0011 0 0 0 0 0 0 0 0 1 0 0 1 
+state_fdtd.0100 0 0 0 0 0 0 0 1 0 0 0 1 
+state_fdtd.0101 0 0 0 0 0 0 1 0 0 0 0 1 
+state_fdtd.0110 0 0 0 0 0 1 0 0 0 0 0 1 
+state_fdtd.0111 0 0 0 0 1 0 0 0 0 0 0 1 
+state_fdtd.1000 0 0 0 1 0 0 0 0 0 0 0 1 
+state_fdtd.1001 0 0 1 0 0 0 0 0 0 0 0 1 
+state_fdtd.1010 0 1 0 0 0 0 0 0 0 0 0 1 
+state_fdtd.1011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|jh_PE4FDTD:gen_inst[10].pe|state_fdtd
+Name state_fdtd.1011 state_fdtd.1010 state_fdtd.1001 state_fdtd.1000 state_fdtd.0111 state_fdtd.0110 state_fdtd.0101 state_fdtd.0100 state_fdtd.0011 state_fdtd.0010 state_fdtd.0001 state_fdtd.0000 
+state_fdtd.0000 0 0 0 0 0 0 0 0 0 0 0 0 
+state_fdtd.0001 0 0 0 0 0 0 0 0 0 0 1 1 
+state_fdtd.0010 0 0 0 0 0 0 0 0 0 1 0 1 
+state_fdtd.0011 0 0 0 0 0 0 0 0 1 0 0 1 
+state_fdtd.0100 0 0 0 0 0 0 0 1 0 0 0 1 
+state_fdtd.0101 0 0 0 0 0 0 1 0 0 0 0 1 
+state_fdtd.0110 0 0 0 0 0 1 0 0 0 0 0 1 
+state_fdtd.0111 0 0 0 0 1 0 0 0 0 0 0 1 
+state_fdtd.1000 0 0 0 1 0 0 0 0 0 0 0 1 
+state_fdtd.1001 0 0 1 0 0 0 0 0 0 0 0 1 
+state_fdtd.1010 0 1 0 0 0 0 0 0 0 0 0 1 
+state_fdtd.1011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|jh_PE4FDTD:gen_inst[9].pe|state_fdtd
+Name state_fdtd.1011 state_fdtd.1010 state_fdtd.1001 state_fdtd.1000 state_fdtd.0111 state_fdtd.0110 state_fdtd.0101 state_fdtd.0100 state_fdtd.0011 state_fdtd.0010 state_fdtd.0001 state_fdtd.0000 
+state_fdtd.0000 0 0 0 0 0 0 0 0 0 0 0 0 
+state_fdtd.0001 0 0 0 0 0 0 0 0 0 0 1 1 
+state_fdtd.0010 0 0 0 0 0 0 0 0 0 1 0 1 
+state_fdtd.0011 0 0 0 0 0 0 0 0 1 0 0 1 
+state_fdtd.0100 0 0 0 0 0 0 0 1 0 0 0 1 
+state_fdtd.0101 0 0 0 0 0 0 1 0 0 0 0 1 
+state_fdtd.0110 0 0 0 0 0 1 0 0 0 0 0 1 
+state_fdtd.0111 0 0 0 0 1 0 0 0 0 0 0 1 
+state_fdtd.1000 0 0 0 1 0 0 0 0 0 0 0 1 
+state_fdtd.1001 0 0 1 0 0 0 0 0 0 0 0 1 
+state_fdtd.1010 0 1 0 0 0 0 0 0 0 0 0 1 
+state_fdtd.1011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|jh_PE4FDTD:gen_inst[8].pe|state_fdtd
+Name state_fdtd.1011 state_fdtd.1010 state_fdtd.1001 state_fdtd.1000 state_fdtd.0111 state_fdtd.0110 state_fdtd.0101 state_fdtd.0100 state_fdtd.0011 state_fdtd.0010 state_fdtd.0001 state_fdtd.0000 
+state_fdtd.0000 0 0 0 0 0 0 0 0 0 0 0 0 
+state_fdtd.0001 0 0 0 0 0 0 0 0 0 0 1 1 
+state_fdtd.0010 0 0 0 0 0 0 0 0 0 1 0 1 
+state_fdtd.0011 0 0 0 0 0 0 0 0 1 0 0 1 
+state_fdtd.0100 0 0 0 0 0 0 0 1 0 0 0 1 
+state_fdtd.0101 0 0 0 0 0 0 1 0 0 0 0 1 
+state_fdtd.0110 0 0 0 0 0 1 0 0 0 0 0 1 
+state_fdtd.0111 0 0 0 0 1 0 0 0 0 0 0 1 
+state_fdtd.1000 0 0 0 1 0 0 0 0 0 0 0 1 
+state_fdtd.1001 0 0 1 0 0 0 0 0 0 0 0 1 
+state_fdtd.1010 0 1 0 0 0 0 0 0 0 0 0 1 
+state_fdtd.1011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|jh_PE4FDTD:gen_inst[7].pe|state_fdtd
+Name state_fdtd.1011 state_fdtd.1010 state_fdtd.1001 state_fdtd.1000 state_fdtd.0111 state_fdtd.0110 state_fdtd.0101 state_fdtd.0100 state_fdtd.0011 state_fdtd.0010 state_fdtd.0001 state_fdtd.0000 
+state_fdtd.0000 0 0 0 0 0 0 0 0 0 0 0 0 
+state_fdtd.0001 0 0 0 0 0 0 0 0 0 0 1 1 
+state_fdtd.0010 0 0 0 0 0 0 0 0 0 1 0 1 
+state_fdtd.0011 0 0 0 0 0 0 0 0 1 0 0 1 
+state_fdtd.0100 0 0 0 0 0 0 0 1 0 0 0 1 
+state_fdtd.0101 0 0 0 0 0 0 1 0 0 0 0 1 
+state_fdtd.0110 0 0 0 0 0 1 0 0 0 0 0 1 
+state_fdtd.0111 0 0 0 0 1 0 0 0 0 0 0 1 
+state_fdtd.1000 0 0 0 1 0 0 0 0 0 0 0 1 
+state_fdtd.1001 0 0 1 0 0 0 0 0 0 0 0 1 
+state_fdtd.1010 0 1 0 0 0 0 0 0 0 0 0 1 
+state_fdtd.1011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|jh_PE4FDTD:gen_inst[6].pe|state_fdtd
+Name state_fdtd.1011 state_fdtd.1010 state_fdtd.1001 state_fdtd.1000 state_fdtd.0111 state_fdtd.0110 state_fdtd.0101 state_fdtd.0100 state_fdtd.0011 state_fdtd.0010 state_fdtd.0001 state_fdtd.0000 
+state_fdtd.0000 0 0 0 0 0 0 0 0 0 0 0 0 
+state_fdtd.0001 0 0 0 0 0 0 0 0 0 0 1 1 
+state_fdtd.0010 0 0 0 0 0 0 0 0 0 1 0 1 
+state_fdtd.0011 0 0 0 0 0 0 0 0 1 0 0 1 
+state_fdtd.0100 0 0 0 0 0 0 0 1 0 0 0 1 
+state_fdtd.0101 0 0 0 0 0 0 1 0 0 0 0 1 
+state_fdtd.0110 0 0 0 0 0 1 0 0 0 0 0 1 
+state_fdtd.0111 0 0 0 0 1 0 0 0 0 0 0 1 
+state_fdtd.1000 0 0 0 1 0 0 0 0 0 0 0 1 
+state_fdtd.1001 0 0 1 0 0 0 0 0 0 0 0 1 
+state_fdtd.1010 0 1 0 0 0 0 0 0 0 0 0 1 
+state_fdtd.1011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|jh_PE4FDTD:gen_inst[5].pe|state_fdtd
+Name state_fdtd.1011 state_fdtd.1010 state_fdtd.1001 state_fdtd.1000 state_fdtd.0111 state_fdtd.0110 state_fdtd.0101 state_fdtd.0100 state_fdtd.0011 state_fdtd.0010 state_fdtd.0001 state_fdtd.0000 
+state_fdtd.0000 0 0 0 0 0 0 0 0 0 0 0 0 
+state_fdtd.0001 0 0 0 0 0 0 0 0 0 0 1 1 
+state_fdtd.0010 0 0 0 0 0 0 0 0 0 1 0 1 
+state_fdtd.0011 0 0 0 0 0 0 0 0 1 0 0 1 
+state_fdtd.0100 0 0 0 0 0 0 0 1 0 0 0 1 
+state_fdtd.0101 0 0 0 0 0 0 1 0 0 0 0 1 
+state_fdtd.0110 0 0 0 0 0 1 0 0 0 0 0 1 
+state_fdtd.0111 0 0 0 0 1 0 0 0 0 0 0 1 
+state_fdtd.1000 0 0 0 1 0 0 0 0 0 0 0 1 
+state_fdtd.1001 0 0 1 0 0 0 0 0 0 0 0 1 
+state_fdtd.1010 0 1 0 0 0 0 0 0 0 0 0 1 
+state_fdtd.1011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|jh_PE4FDTD:gen_inst[4].pe|state_fdtd
+Name state_fdtd.1011 state_fdtd.1010 state_fdtd.1001 state_fdtd.1000 state_fdtd.0111 state_fdtd.0110 state_fdtd.0101 state_fdtd.0100 state_fdtd.0011 state_fdtd.0010 state_fdtd.0001 state_fdtd.0000 
+state_fdtd.0000 0 0 0 0 0 0 0 0 0 0 0 0 
+state_fdtd.0001 0 0 0 0 0 0 0 0 0 0 1 1 
+state_fdtd.0010 0 0 0 0 0 0 0 0 0 1 0 1 
+state_fdtd.0011 0 0 0 0 0 0 0 0 1 0 0 1 
+state_fdtd.0100 0 0 0 0 0 0 0 1 0 0 0 1 
+state_fdtd.0101 0 0 0 0 0 0 1 0 0 0 0 1 
+state_fdtd.0110 0 0 0 0 0 1 0 0 0 0 0 1 
+state_fdtd.0111 0 0 0 0 1 0 0 0 0 0 0 1 
+state_fdtd.1000 0 0 0 1 0 0 0 0 0 0 0 1 
+state_fdtd.1001 0 0 1 0 0 0 0 0 0 0 0 1 
+state_fdtd.1010 0 1 0 0 0 0 0 0 0 0 0 1 
+state_fdtd.1011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|jh_PE4FDTD:gen_inst[3].pe|state_fdtd
+Name state_fdtd.1011 state_fdtd.1010 state_fdtd.1001 state_fdtd.1000 state_fdtd.0111 state_fdtd.0110 state_fdtd.0101 state_fdtd.0100 state_fdtd.0011 state_fdtd.0010 state_fdtd.0001 state_fdtd.0000 
+state_fdtd.0000 0 0 0 0 0 0 0 0 0 0 0 0 
+state_fdtd.0001 0 0 0 0 0 0 0 0 0 0 1 1 
+state_fdtd.0010 0 0 0 0 0 0 0 0 0 1 0 1 
+state_fdtd.0011 0 0 0 0 0 0 0 0 1 0 0 1 
+state_fdtd.0100 0 0 0 0 0 0 0 1 0 0 0 1 
+state_fdtd.0101 0 0 0 0 0 0 1 0 0 0 0 1 
+state_fdtd.0110 0 0 0 0 0 1 0 0 0 0 0 1 
+state_fdtd.0111 0 0 0 0 1 0 0 0 0 0 0 1 
+state_fdtd.1000 0 0 0 1 0 0 0 0 0 0 0 1 
+state_fdtd.1001 0 0 1 0 0 0 0 0 0 0 0 1 
+state_fdtd.1010 0 1 0 0 0 0 0 0 0 0 0 1 
+state_fdtd.1011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|jh_PE4FDTD:gen_inst[2].pe|state_fdtd
+Name state_fdtd.1011 state_fdtd.1010 state_fdtd.1001 state_fdtd.1000 state_fdtd.0111 state_fdtd.0110 state_fdtd.0101 state_fdtd.0100 state_fdtd.0011 state_fdtd.0010 state_fdtd.0001 state_fdtd.0000 
+state_fdtd.0000 0 0 0 0 0 0 0 0 0 0 0 0 
+state_fdtd.0001 0 0 0 0 0 0 0 0 0 0 1 1 
+state_fdtd.0010 0 0 0 0 0 0 0 0 0 1 0 1 
+state_fdtd.0011 0 0 0 0 0 0 0 0 1 0 0 1 
+state_fdtd.0100 0 0 0 0 0 0 0 1 0 0 0 1 
+state_fdtd.0101 0 0 0 0 0 0 1 0 0 0 0 1 
+state_fdtd.0110 0 0 0 0 0 1 0 0 0 0 0 1 
+state_fdtd.0111 0 0 0 0 1 0 0 0 0 0 0 1 
+state_fdtd.1000 0 0 0 1 0 0 0 0 0 0 0 1 
+state_fdtd.1001 0 0 1 0 0 0 0 0 0 0 0 1 
+state_fdtd.1010 0 1 0 0 0 0 0 0 0 0 0 1 
+state_fdtd.1011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|jh_PE4FDTD:gen_inst[1].pe|state_fdtd
+Name state_fdtd.1011 state_fdtd.1010 state_fdtd.1001 state_fdtd.1000 state_fdtd.0111 state_fdtd.0110 state_fdtd.0101 state_fdtd.0100 state_fdtd.0011 state_fdtd.0010 state_fdtd.0001 state_fdtd.0000 
+state_fdtd.0000 0 0 0 0 0 0 0 0 0 0 0 0 
+state_fdtd.0001 0 0 0 0 0 0 0 0 0 0 1 1 
+state_fdtd.0010 0 0 0 0 0 0 0 0 0 1 0 1 
+state_fdtd.0011 0 0 0 0 0 0 0 0 1 0 0 1 
+state_fdtd.0100 0 0 0 0 0 0 0 1 0 0 0 1 
+state_fdtd.0101 0 0 0 0 0 0 1 0 0 0 0 1 
+state_fdtd.0110 0 0 0 0 0 1 0 0 0 0 0 1 
+state_fdtd.0111 0 0 0 0 1 0 0 0 0 0 0 1 
+state_fdtd.1000 0 0 0 1 0 0 0 0 0 0 0 1 
+state_fdtd.1001 0 0 1 0 0 0 0 0 0 0 0 1 
+state_fdtd.1010 0 1 0 0 0 0 0 0 0 0 0 1 
+state_fdtd.1011 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:pixel_dma_addr_translation_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:hw_reset_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:power_unlock_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:module_csr_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:finish_fdtd_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:iteration_number_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:electrode_voltage_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:thermocouples_sel_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:sp_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:command_from_hps_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:rf_on_off_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:o_temperature2_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:o_pw_reversed_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:o_pw_forward_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:o_temperature_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:number32_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:sw_s1_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:fifo_fpga_to_hps_out_csr_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:fifo_hps_to_fpga_in_csr_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_2:mm_interconnect_2|altera_merlin_burst_adapter:vga_subsystem_char_control_slave_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_mm_interconnect_1:mm_interconnect_1|altera_merlin_burst_adapter:fifo_fpga_to_hps_out_burst_adapter|altera_merlin_burst_adapter_13_1:altera_merlin_burst_adapter_13_1.burst_adapter|state
+Name state.ST_IDLE state.ST_UNCOMP_WR_SUBBURST state.ST_UNCOMP_TRANS state.ST_COMP_TRANS 
+state.ST_IDLE 0 0 0 0 
+state.ST_COMP_TRANS 1 0 0 1 
+state.ST_UNCOMP_TRANS 1 0 1 0 
+state.ST_UNCOMP_WR_SUBBURST 1 1 0 0 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_VGA_subsystem:vga_subsystem|nios2_VGA_subsystem_video_pixel_DMA:video_pixel_dma|s_pixel_buffer
+Name s_pixel_buffer.STATE_3_MAX_PENDING_READS_STALL s_pixel_buffer.STATE_2_READ_BUFFER s_pixel_buffer.STATE_1_WAIT_FOR_LAST_PIXEL s_pixel_buffer.STATE_0_IDLE 
+s_pixel_buffer.STATE_0_IDLE 0 0 0 0 
+s_pixel_buffer.STATE_1_WAIT_FOR_LAST_PIXEL 0 0 1 1 
+s_pixel_buffer.STATE_2_READ_BUFFER 0 1 0 1 
+s_pixel_buffer.STATE_3_MAX_PENDING_READS_STALL 1 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|jh_adc_rfsig:fw_power|current_state
+Name current_state.DELAY current_state.RESULT current_state.READ current_state.READ_WAIT2 current_state.READ_WAIT1 current_state.READ_SET current_state.WRITE current_state.WAIT current_state.WAIT_RFOFF 
+current_state.WAIT 0 0 0 0 0 0 0 0 0 
+current_state.WRITE 0 0 0 0 0 0 1 1 0 
+current_state.READ_SET 0 0 0 0 0 1 0 1 0 
+current_state.READ_WAIT1 0 0 0 0 1 0 0 1 0 
+current_state.READ_WAIT2 0 0 0 1 0 0 0 1 0 
+current_state.READ 0 0 1 0 0 0 0 1 0 
+current_state.RESULT 0 1 0 0 0 0 0 1 0 
+current_state.DELAY 1 0 0 0 0 0 0 1 0 
+current_state.WAIT_RFOFF 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE1_SOC_golden_top|jh_adc_rfsig:fw_power|next_state
+Name next_state.DELAY next_state.RESULT next_state.READ next_state.READ_WAIT2 next_state.READ_WAIT1 next_state.READ_SET next_state.WRITE next_state.WAIT next_state.WAIT_RFOFF 
+next_state.WAIT 0 0 0 0 0 0 0 0 0 
+next_state.WRITE 0 0 0 0 0 0 1 1 0 
+next_state.READ_SET 0 0 0 0 0 1 0 1 0 
+next_state.READ_WAIT1 0 0 0 0 1 0 0 1 0 
+next_state.READ_WAIT2 0 0 0 1 0 0 0 1 0 
+next_state.READ 0 0 1 0 0 0 0 1 0 
+next_state.RESULT 0 1 0 0 0 0 0 1 0 
+next_state.DELAY 1 0 0 0 0 0 0 1 0 
+next_state.WAIT_RFOFF 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE1_SOC_golden_top|fpga_to_hps_out_state
+Name fpga_to_hps_out_state.0110 fpga_to_hps_out_state.0101 fpga_to_hps_out_state.0100 fpga_to_hps_out_state.0011 fpga_to_hps_out_state.0010 fpga_to_hps_out_state.0001 fpga_to_hps_out_state.0000 
+fpga_to_hps_out_state.0000 0 0 0 0 0 0 0 
+fpga_to_hps_out_state.0001 0 0 0 0 0 1 1 
+fpga_to_hps_out_state.0010 0 0 0 0 1 0 1 
+fpga_to_hps_out_state.0011 0 0 0 1 0 0 1 
+fpga_to_hps_out_state.0100 0 0 1 0 0 0 1 
+fpga_to_hps_out_state.0101 0 1 0 0 0 0 1 
+fpga_to_hps_out_state.0110 1 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|hps_to_fpga_out_state
+Name hps_to_fpga_out_state.00000011 hps_to_fpga_out_state.00000010 hps_to_fpga_out_state.00000001 hps_to_fpga_out_state.00000000 hps_to_fpga_out_state.00000100 
+hps_to_fpga_out_state.00000000 0 0 0 0 0 
+hps_to_fpga_out_state.00000001 0 0 1 1 0 
+hps_to_fpga_out_state.00000010 0 1 0 1 0 
+hps_to_fpga_out_state.00000011 1 0 0 1 0 
+hps_to_fpga_out_state.00000100 0 0 0 1 1 
+
+State Machine - |DE1_SOC_golden_top|jh_adc_rfsig:re_power|current_state
+Name current_state.DELAY current_state.RESULT current_state.READ current_state.READ_WAIT2 current_state.READ_WAIT1 current_state.READ_SET current_state.WRITE current_state.WAIT current_state.WAIT_RFOFF 
+current_state.WAIT 0 0 0 0 0 0 0 0 0 
+current_state.WRITE 0 0 0 0 0 0 1 1 0 
+current_state.READ_SET 0 0 0 0 0 1 0 1 0 
+current_state.READ_WAIT1 0 0 0 0 1 0 0 1 0 
+current_state.READ_WAIT2 0 0 0 1 0 0 0 1 0 
+current_state.READ 0 0 1 0 0 0 0 1 0 
+current_state.RESULT 0 1 0 0 0 0 0 1 0 
+current_state.DELAY 1 0 0 0 0 0 0 1 0 
+current_state.WAIT_RFOFF 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE1_SOC_golden_top|jh_adc_rfsig:re_power|next_state
+Name next_state.DELAY next_state.RESULT next_state.READ next_state.READ_WAIT2 next_state.READ_WAIT1 next_state.READ_SET next_state.WRITE next_state.WAIT next_state.WAIT_RFOFF 
+next_state.WAIT 0 0 0 0 0 0 0 0 0 
+next_state.WRITE 0 0 0 0 0 0 1 1 0 
+next_state.READ_SET 0 0 0 0 0 1 0 1 0 
+next_state.READ_WAIT1 0 0 0 0 1 0 0 1 0 
+next_state.READ_WAIT2 0 0 0 1 0 0 0 1 0 
+next_state.READ 0 0 1 0 0 0 0 1 0 
+next_state.RESULT 0 1 0 0 0 0 0 1 0 
+next_state.DELAY 1 0 0 0 0 0 0 1 0 
+next_state.WAIT_RFOFF 0 0 0 0 0 0 0 1 1 
+
+State Machine - |DE1_SOC_golden_top|jh_adc_temp:md_adc_temp|state
+Name state.0110 state.0101 state.0100 state.0011 state.0010 state.0001 state.0000 
+state.0000 0 0 0 0 0 0 0 
+state.0001 0 0 0 0 0 1 1 
+state.0010 0 0 0 0 1 0 1 
+state.0011 0 0 0 1 0 0 1 
+state.0100 0 0 1 0 0 0 1 
+state.0101 0 1 0 0 0 0 1 
+state.0110 1 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_sdram:sdram|i_state
+Name i_state.111 i_state.101 i_state.011 i_state.010 i_state.001 i_state.000 
+i_state.000 0 0 0 0 0 0 
+i_state.001 0 0 0 0 1 1 
+i_state.010 0 0 0 1 0 1 
+i_state.011 0 0 1 0 0 1 
+i_state.101 0 1 0 0 0 1 
+i_state.111 1 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_sdram:sdram|i_next
+Name i_next.111 i_next.101 i_next.010 i_next.000 
+i_next.000 0 0 0 0 
+i_next.010 0 0 1 1 
+i_next.101 0 1 0 1 
+i_next.111 1 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_sdram:sdram|m_state
+Name m_state.100000000 m_state.010000000 m_state.001000000 m_state.000100000 m_state.000010000 m_state.000001000 m_state.000000100 m_state.000000010 m_state.000000001 
+m_state.000000001 0 0 0 0 0 0 0 0 0 
+m_state.000000010 0 0 0 0 0 0 0 1 1 
+m_state.000000100 0 0 0 0 0 0 1 0 1 
+m_state.000001000 0 0 0 0 0 1 0 0 1 
+m_state.000010000 0 0 0 0 1 0 0 0 1 
+m_state.000100000 0 0 0 1 0 0 0 0 1 
+m_state.001000000 0 0 1 0 0 0 0 0 1 
+m_state.010000000 0 1 0 0 0 0 0 0 1 
+m_state.100000000 1 0 0 0 0 0 0 0 1 
+
+State Machine - |DE1_SOC_golden_top|nios2:nios2_sdram|nios2_sdram:sdram|m_next
+Name m_next.010000000 m_next.000010000 m_next.000001000 m_next.000000001 
+m_next.000000001 0 0 0 0 
+m_next.000001000 0 0 1 1 
+m_next.000010000 0 1 0 1 
+m_next.010000000 1 0 0 1 

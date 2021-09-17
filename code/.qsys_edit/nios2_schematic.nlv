@@ -1,0 +1,151 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios2.O_temperature -pg 1 -lvl 3 -y 1370
+preplace inst nios2.hps_0.qspi -pg 1
+preplace inst nios2.HW_reset -pg 1 -lvl 3 -y 30
+preplace inst nios2.VGA_subsystem.video_alpha_blender_0 -pg 1
+preplace inst nios2.hps_0.fpgamgr -pg 1
+preplace inst nios2.hps_0.axi_ocram -pg 1
+preplace inst nios2.VGA_subsystem.video_character_buffer_with_dma_0 -pg 1
+preplace inst nios2.clock_bridge_0 -pg 1 -lvl 1 -y 1610
+preplace inst nios2.hps_0.sysmgr -pg 1
+preplace inst nios2.VGA_subsystem.VGA_pixel_rgb_resampler -pg 1
+preplace inst nios2.VGA_subsystem.video_vga_controller_0 -pg 1
+preplace inst nios2.fifo_FPGA_to_HPS -pg 1 -lvl 5 -y 600
+preplace inst nios2.VGA_subsystem.Sys_Clk -pg 1
+preplace inst nios2 -pg 1 -lvl 1 -y 40 -regml 11 -regy -20
+preplace inst nios2.hps_0.timer0 -pg 1
+preplace inst nios2.hps_0.f2s_periph_ref_clk -pg 1
+preplace inst nios2.hps_0.timer1 -pg 1
+preplace inst nios2.hps_0.rstmgr -pg 1
+preplace inst nios2.sdram -pg 1 -lvl 9 -y 1800
+preplace inst nios2.hps_0.l3regs -pg 1
+preplace inst nios2.hps_0.timer2 -pg 1
+preplace inst nios2.finish_fdtd -pg 1 -lvl 3 -y 230
+preplace inst nios2.VGA_subsystem.video_pixel_DMA -pg 1
+preplace inst nios2.hps_0.scu -pg 1
+preplace inst nios2.hps_0.spim0 -pg 1
+preplace inst nios2.hps_0.timer3 -pg 1
+preplace inst nios2.VGA_subsystem -pg 1 -lvl 4 -y 1590
+preplace inst nios2.hps_0.spim1 -pg 1
+preplace inst nios2.hps_0.arm_a9_0 -pg 1
+preplace inst nios2.VGA_subsystem.video_dual_clock_FIFO -pg 1
+preplace inst nios2.rf_on_off -pg 1 -lvl 3 -y 1130
+preplace inst nios2.hps_0 -pg 1 -lvl 2 -y 1180
+preplace inst nios2.hps_0.arm_a9_1 -pg 1
+preplace inst nios2.fifo_HPS_to_FPGA -pg 1 -lvl 5 -y 780
+preplace inst nios2.clock_bridge_65 -pg 1 -lvl 3 -y 1520
+preplace inst nios2.hps_0.arm_gic_0 -pg 1
+preplace inst nios2.hps_0.uart0 -pg 1
+preplace inst nios2.command_from_hps -pg 1 -lvl 3 -y 130
+preplace inst nios2.hps_0.dcan0 -pg 1
+preplace inst nios2.hps_0.usb0 -pg 1
+preplace inst nios2.hps_0.L2 -pg 1
+preplace inst nios2.hps_0.uart1 -pg 1
+preplace inst nios2.hps_0.dcan1 -pg 1
+preplace inst nios2.hps_0.usb1 -pg 1
+preplace inst nios2.SP -pg 1 -lvl 3 -y 2250
+preplace inst nios2.VGA_subsystem.VGA_PLL.video_pll -pg 1
+preplace inst nios2.VGA_subsystem.VGA_pixel_FIFO -pg 1
+preplace inst nios2.hps_0.hps_io -pg 1
+preplace inst nios2.hps_0.clk_0 -pg 1
+preplace inst nios2.hps_0.clkmgr -pg 1
+preplace inst nios2.electrode_voltage -pg 1 -lvl 3 -y 330
+preplace inst nios2.hps_0.sdrctl -pg 1
+preplace inst nios2.power_unlock -pg 1 -lvl 3 -y 430
+preplace inst nios2.module_csr -pg 1 -lvl 3 -y 570
+preplace inst nios2.hps_0.gmac0 -pg 1
+preplace inst nios2.hps_0.f2s_sdram_ref_clk -pg 1
+preplace inst nios2.SW -pg 1 -lvl 3 -y 2050
+preplace inst nios2.bridge_FPGA_tempADC -pg 1 -lvl 2 -y 1590
+preplace inst nios2.hps_0.gmac1 -pg 1
+preplace inst nios2.hps_0.nand0 -pg 1
+preplace inst nios2.Pixel_DMA_Addr_Translation -pg 1 -lvl 3 -y 1610
+preplace inst nios2.VGA_subsystem.VGA_PLL.reset_from_locked -pg 1
+preplace inst nios2.clock_bridge_100 -pg 1 -lvl 2 -y 1410
+preplace inst nios2.iteration_number -pg 1 -lvl 3 -y 670
+preplace inst nios2.pll_adc -pg 1 -lvl 2 -y 1470
+preplace inst nios2.hps_0.gpio0 -pg 1
+preplace inst nios2.hps_0.gpio1 -pg 1
+preplace inst nios2.O_pw_forward -pg 1 -lvl 3 -y 2150
+preplace inst nios2.hps_0.wd_timer0 -pg 1
+preplace inst nios2.hps_0.gpio2 -pg 1
+preplace inst nios2.O_temperature2 -pg 1 -lvl 3 -y 1230
+preplace inst nios2.hps_0.wd_timer1 -pg 1
+preplace inst nios2.clocks.reset_from_locked -pg 1
+preplace inst nios2.hps_0.eosc1 -pg 1
+preplace inst nios2.hps_0.fpga_interfaces -pg 1
+preplace inst nios2.onchip_ram1 -pg 1 -lvl 5 -y 1410
+preplace inst nios2.VGA_subsystem.VGA_PLL -pg 1
+preplace inst nios2.hps_0.eosc2 -pg 1
+preplace inst nios2.hps_0.i2c0 -pg 1
+preplace inst nios2.onchip_ram2 -pg 1 -lvl 5 -y 980
+preplace inst nios2.hps_0.sdmmc -pg 1
+preplace inst nios2.hps_0.i2c1 -pg 1
+preplace inst nios2.thermocouples_sel -pg 1 -lvl 3 -y 1010
+preplace inst nios2.hps_0.timer -pg 1
+preplace inst nios2.hps_0.i2c2 -pg 1
+preplace inst nios2.hps_0.i2c3 -pg 1
+preplace inst nios2.hps_0.dma -pg 1
+preplace inst nios2.Number32 -pg 1 -lvl 3 -y 830
+preplace inst nios2.clocks -pg 1 -lvl 1 -y 1740
+preplace inst nios2.O_pw_reversed -pg 1 -lvl 3 -y 1950
+preplace inst nios2.hps_0.hps_io.border -pg 1
+preplace inst nios2.hps_0.bridges -pg 1
+preplace inst nios2.temperature_adc -pg 1 -lvl 3 -y 1830
+preplace inst nios2.hps_0.axi_sdram -pg 1
+preplace inst nios2.clocks.sys_pll -pg 1
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)VGA_subsystem.video_ref_clk,(SLAVE)nios2.video_ref_clk) 1 0 4 NJ 1700 NJ 1720 NJ 1720 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(MASTER)clock_bridge_100.out_clk,(MASTER)nios2.clock_bridge_100_out_clk) 1 2 9 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ 1340 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.vga_ref_reset,(SLAVE)VGA_subsystem.video_pll_ref_reset) 1 0 4 NJ 1840 NJ 1840 NJ 1780 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)Number32.external_connection,(SLAVE)nios2.number32) 1 0 3 NJ 860 NJ 860 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)hps_0.hps_io,(SLAVE)nios2.hps_io) 1 0 2 NJ 1230 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)clock_bridge_0.in_clk,(SLAVE)nios2.clock_bridge_0_in_clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)fifo_HPS_to_FPGA.clk_out,(SLAVE)nios2.fifo_hps_to_fpga_clk_out) 1 0 5 NJ 980 NJ 1000 NJ 1000 NJ 810 NJ
+preplace netloc POINT_TO_POINT<net_container>nios2</net_container>(MASTER)bridge_FPGA_tempADC.avalon_master,(SLAVE)temperature_adc.slave) 1 2 1 1060
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)fifo_HPS_to_FPGA.out_csr,(SLAVE)nios2.fifo_hps_to_fpga_out_csr) 1 0 5 NJ 750 NJ 820 NJ 820 NJ 470 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)fifo_FPGA_to_HPS.in_csr,(SLAVE)nios2.fifo_fpga_to_hps_in_csr) 1 0 5 NJ 520 NJ 520 NJ 540 NJ 390 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)fifo_FPGA_to_HPS.in,(SLAVE)nios2.fifo_fpga_to_hps_in) 1 0 5 NJ 560 NJ 560 NJ 560 NJ 410 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)fifo_FPGA_to_HPS.clk_in,(SLAVE)nios2.fifo_fpga_to_hps_clk_in) 1 0 5 NJ 960 NJ 960 NJ 960 NJ 510 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)electrode_voltage.external_connection,(SLAVE)nios2.electrode_voltage_external_connection) 1 0 3 NJ 360 NJ 360 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.bridge_0_external_interface,(SLAVE)bridge_FPGA_tempADC.external_interface) 1 0 2 NJ 1600 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)fifo_FPGA_to_HPS.reset_in,(SLAVE)nios2.fifo_fpga_to_hps_reset_in) 1 0 5 NJ 710 NJ 710 NJ 780 NJ 430 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)rf_on_off.external_connection,(SLAVE)nios2.rf_on_off_external_connection) 1 0 3 NJ 1140 NJ 1140 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.o_temperature2_external_connection,(SLAVE)O_temperature2.external_connection) 1 0 3 NJ 1340 NJ 1340 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)O_pw_forward.external_connection,(SLAVE)nios2.o_pw_forward_external_connection) 1 0 3 NJ 2180 NJ 2180 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)iteration_number.external_connection,(SLAVE)nios2.iteration_number_external_connection) 1 0 3 NJ 690 NJ 690 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.hw_reset_external_connection,(SLAVE)HW_reset.external_connection) 1 0 3 NJ 60 NJ 60 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.onchip_ram1_s1,(SLAVE)onchip_ram1.s1) 1 0 5 NJ 1360 NJ 1360 NJ 1360 NJ 1440 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.fifo_hps_to_fpga_reset_out,(SLAVE)fifo_HPS_to_FPGA.reset_out) 1 0 5 NJ 920 NJ 920 NJ 940 NJ 490 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.clk,(SLAVE)clocks.ref_clk) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)onchip_ram2.reset1,(SLAVE)nios2.onchip_ram2_reset1) 1 0 5 NJ 1060 NJ 1060 NJ 1120 NJ 890 NJ
+preplace netloc FAN_OUT<net_container>nios2</net_container>(SLAVE)bridge_FPGA_tempADC.clk,(SLAVE)temperature_adc.clock_sink,(MASTER)clock_bridge_0.out_clk) 1 1 2 510 1900 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.vga_out,(SLAVE)VGA_subsystem.vga_out) 1 0 4 NJ 1680 NJ 1680 NJ 1700 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.thermocouples_sel_external_connection,(SLAVE)thermocouples_sel.external_connection) 1 0 3 NJ 1040 NJ 1040 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)clocks.ref_reset,(SLAVE)nios2.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.command_from_hps_external_connection,(SLAVE)command_from_hps.external_connection) 1 0 3 NJ 160 NJ 160 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)module_csr.external_connection,(SLAVE)nios2.module_csr_external_connection) 1 0 3 NJ 540 NJ 540 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(MASTER)clock_bridge_65.out_clk,(MASTER)nios2.clock_bridge_65_out_clk) 1 3 8 NJ 1500 NJ 1560 NJ 1560 NJ 1560 NJ 1560 NJ 1560 NJ 1560 NJ
+preplace netloc POINT_TO_POINT<net_container>nios2</net_container>(SLAVE)VGA_subsystem.pixel_dma_slave,(MASTER)Pixel_DMA_Addr_Translation.master) 1 3 1 N
+preplace netloc INTERCONNECT<net_container>nios2</net_container>(MASTER)hps_0.h2f_reset,(SLAVE)fifo_HPS_to_FPGA.reset_in,(SLAVE)rf_on_off.reset,(SLAVE)fifo_FPGA_to_HPS.reset_out,(SLAVE)SW.reset,(SLAVE)power_unlock.reset,(SLAVE)finish_fdtd.reset,(SLAVE)pll_adc.reset,(SLAVE)iteration_number.reset,(SLAVE)O_pw_reversed.reset,(SLAVE)O_temperature.reset,(SLAVE)HW_reset.reset,(SLAVE)VGA_subsystem.sys_reset,(SLAVE)bridge_FPGA_tempADC.reset,(SLAVE)O_pw_forward.reset,(SLAVE)SP.reset,(SLAVE)O_temperature2.reset,(SLAVE)onchip_ram1.reset2,(SLAVE)command_from_hps.reset,(SLAVE)sdram.reset,(SLAVE)thermocouples_sel.reset,(SLAVE)Pixel_DMA_Addr_Translation.reset,(SLAVE)temperature_adc.reset_sink,(SLAVE)Number32.reset,(SLAVE)electrode_voltage.reset,(SLAVE)onchip_ram2.reset2,(SLAVE)module_csr.reset,(MASTER)clocks.reset_source) 1 1 8 490 1750 980 1760 1630 1850 2090 1830 NJ 1830 NJ 1830 NJ 1830 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.power_unlock_external_connection,(SLAVE)power_unlock.external_connection) 1 0 3 NJ 460 NJ 460 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)pll_adc.locked,(SLAVE)nios2.pll_adc_locked) 1 0 2 NJ 1480 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)onchip_ram2.s1,(SLAVE)nios2.onchip_ram2_s1) 1 0 5 NJ 1020 NJ 980 NJ 980 NJ 1070 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.o_pw_reversed_external_connection,(SLAVE)O_pw_reversed.external_connection) 1 0 3 NJ 1980 NJ 1980 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.sdram_wire,(SLAVE)sdram.wire) 1 0 9 NJ 1860 NJ 1860 NJ 1800 NJ 1870 NJ 1870 NJ 1870 NJ 1870 NJ 1870 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)onchip_ram1.reset1,(SLAVE)nios2.onchip_ram1_reset1) 1 0 5 NJ 1460 NJ 1460 NJ 1510 NJ 1480 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(MASTER)nios2.sdram_clk,(MASTER)clocks.sdram_clk) 1 1 10 NJ 1880 NJ 1820 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ 1910 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)hps_0.memory,(SLAVE)nios2.memory) 1 0 2 NJ 1290 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.adc_ltc2308_0_conduit_end,(SLAVE)temperature_adc.conduit_end) 1 0 3 NJ 1920 NJ 1920 NJ
+preplace netloc FAN_OUT<net_container>nios2</net_container>(MASTER)hps_0.h2f_lw_axi_master,(SLAVE)VGA_subsystem.char_control_slave,(SLAVE)rf_on_off.s1,(SLAVE)module_csr.s1,(SLAVE)power_unlock.s1,(SLAVE)fifo_HPS_to_FPGA.in_csr,(SLAVE)HW_reset.s1,(SLAVE)thermocouples_sel.s1,(SLAVE)fifo_FPGA_to_HPS.out_csr,(SLAVE)electrode_voltage.s1,(SLAVE)O_temperature2.s1,(SLAVE)O_pw_forward.s1,(SLAVE)finish_fdtd.s1,(SLAVE)SP.s1,(SLAVE)iteration_number.s1,(SLAVE)O_temperature.s1,(SLAVE)Pixel_DMA_Addr_Translation.slave,(SLAVE)Number32.s1,(SLAVE)O_pw_reversed.s1,(SLAVE)SW.s1,(SLAVE)command_from_hps.s1) 1 2 3 1000 1600 1470 1550 1950
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.finish_fdtd_external_connection,(SLAVE)finish_fdtd.external_connection) 1 0 3 NJ 260 NJ 260 NJ
+preplace netloc FAN_OUT<net_container>nios2</net_container>(SLAVE)hps_0.f2h_axi_clock,(SLAVE)O_pw_reversed.clk,(SLAVE)thermocouples_sel.clk,(SLAVE)Pixel_DMA_Addr_Translation.clock,(SLAVE)power_unlock.clk,(SLAVE)O_temperature.clk,(SLAVE)hps_0.h2f_axi_clock,(SLAVE)rf_on_off.clk,(SLAVE)iteration_number.clk,(SLAVE)VGA_subsystem.sys_clk,(SLAVE)sdram.clk,(SLAVE)hps_0.h2f_lw_axi_clock,(SLAVE)fifo_FPGA_to_HPS.clk_out,(SLAVE)SW.clk,(SLAVE)onchip_ram1.clk2,(MASTER)clocks.sys_clk,(SLAVE)SP.clk,(SLAVE)O_pw_forward.clk,(SLAVE)electrode_voltage.clk,(SLAVE)fifo_HPS_to_FPGA.clk_in,(SLAVE)O_temperature2.clk,(SLAVE)Number32.clk,(SLAVE)pll_adc.refclk,(SLAVE)module_csr.clk,(SLAVE)HW_reset.clk,(SLAVE)clock_bridge_100.in_clk,(SLAVE)command_from_hps.clk,(SLAVE)finish_fdtd.clk,(SLAVE)onchip_ram2.clk2) 1 1 8 470 1790 1080 1740 1570 1810 2010 1810 NJ 1810 NJ 1810 NJ 1810 NJ
+preplace netloc POINT_TO_POINT<net_container>nios2</net_container>(SLAVE)temperature_adc.clock_sink_adc,(MASTER)pll_adc.outclk0) 1 2 1 1120
+preplace netloc INTERCONNECT<net_container>nios2</net_container>(SLAVE)VGA_subsystem.char_buffer_slave,(SLAVE)fifo_FPGA_to_HPS.out,(SLAVE)fifo_HPS_to_FPGA.in,(MASTER)hps_0.h2f_axi_master,(SLAVE)onchip_ram1.s2,(SLAVE)onchip_ram2.s2,(MASTER)VGA_subsystem.pixel_dma_master,(SLAVE)sdram.s1) 1 2 7 1040 1580 1510 1830 2050 1850 NJ 1850 NJ 1850 NJ 1850 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)nios2.o_temperature_external_connection,(SLAVE)O_temperature.external_connection) 1 0 3 NJ 1400 NJ 1400 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)SW.external_connection,(SLAVE)nios2.sw_external_connection) 1 0 3 NJ 2080 NJ 2080 NJ
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)SP.external_connection,(SLAVE)nios2.sp_external_connection) 1 0 3 NJ 2280 NJ 2280 NJ
+preplace netloc FAN_OUT<net_container>nios2</net_container>(SLAVE)clock_bridge_65.in_clk,(SLAVE)onchip_ram2.clk1,(SLAVE)onchip_ram1.clk1,(MASTER)pll_adc.outclk1) 1 2 3 1140 1490 NJ 1460 2030
+preplace netloc EXPORT<net_container>nios2</net_container>(SLAVE)fifo_HPS_to_FPGA.out,(SLAVE)nios2.fifo_hps_to_fpga_out) 1 0 5 NJ 730 NJ 730 NJ 800 NJ 450 NJ
+levelinfo -pg 1 0 200 3700
+levelinfo -hier nios2 210 290 710 1300 1770 2300 2420 2820 3100 3260 3500 3520

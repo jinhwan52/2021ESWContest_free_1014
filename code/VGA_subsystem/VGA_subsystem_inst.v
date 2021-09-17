@@ -1,0 +1,42 @@
+	VGA_subsystem u0 (
+		.char_buffer_slave_byteenable   (<connected-to-char_buffer_slave_byteenable>),   //   char_buffer_slave.byteenable
+		.char_buffer_slave_chipselect   (<connected-to-char_buffer_slave_chipselect>),   //                    .chipselect
+		.char_buffer_slave_read         (<connected-to-char_buffer_slave_read>),         //                    .read
+		.char_buffer_slave_write        (<connected-to-char_buffer_slave_write>),        //                    .write
+		.char_buffer_slave_writedata    (<connected-to-char_buffer_slave_writedata>),    //                    .writedata
+		.char_buffer_slave_readdata     (<connected-to-char_buffer_slave_readdata>),     //                    .readdata
+		.char_buffer_slave_waitrequest  (<connected-to-char_buffer_slave_waitrequest>),  //                    .waitrequest
+		.char_buffer_slave_address      (<connected-to-char_buffer_slave_address>),      //                    .address
+		.char_control_slave_address     (<connected-to-char_control_slave_address>),     //  char_control_slave.address
+		.char_control_slave_byteenable  (<connected-to-char_control_slave_byteenable>),  //                    .byteenable
+		.char_control_slave_chipselect  (<connected-to-char_control_slave_chipselect>),  //                    .chipselect
+		.char_control_slave_read        (<connected-to-char_control_slave_read>),        //                    .read
+		.char_control_slave_write       (<connected-to-char_control_slave_write>),       //                    .write
+		.char_control_slave_writedata   (<connected-to-char_control_slave_writedata>),   //                    .writedata
+		.char_control_slave_readdata    (<connected-to-char_control_slave_readdata>),    //                    .readdata
+		.pixel_dma_master_readdatavalid (<connected-to-pixel_dma_master_readdatavalid>), //    pixel_dma_master.readdatavalid
+		.pixel_dma_master_waitrequest   (<connected-to-pixel_dma_master_waitrequest>),   //                    .waitrequest
+		.pixel_dma_master_address       (<connected-to-pixel_dma_master_address>),       //                    .address
+		.pixel_dma_master_lock          (<connected-to-pixel_dma_master_lock>),          //                    .lock
+		.pixel_dma_master_read          (<connected-to-pixel_dma_master_read>),          //                    .read
+		.pixel_dma_master_readdata      (<connected-to-pixel_dma_master_readdata>),      //                    .readdata
+		.pixel_dma_slave_address        (<connected-to-pixel_dma_slave_address>),        //     pixel_dma_slave.address
+		.pixel_dma_slave_byteenable     (<connected-to-pixel_dma_slave_byteenable>),     //                    .byteenable
+		.pixel_dma_slave_read           (<connected-to-pixel_dma_slave_read>),           //                    .read
+		.pixel_dma_slave_write          (<connected-to-pixel_dma_slave_write>),          //                    .write
+		.pixel_dma_slave_writedata      (<connected-to-pixel_dma_slave_writedata>),      //                    .writedata
+		.pixel_dma_slave_readdata       (<connected-to-pixel_dma_slave_readdata>),       //                    .readdata
+		.sys_clk_clk                    (<connected-to-sys_clk_clk>),                    //             sys_clk.clk
+		.sys_reset_reset_n              (<connected-to-sys_reset_reset_n>),              //           sys_reset.reset_n
+		.vga_out_CLK                    (<connected-to-vga_out_CLK>),                    //             vga_out.CLK
+		.vga_out_HS                     (<connected-to-vga_out_HS>),                     //                    .HS
+		.vga_out_VS                     (<connected-to-vga_out_VS>),                     //                    .VS
+		.vga_out_BLANK                  (<connected-to-vga_out_BLANK>),                  //                    .BLANK
+		.vga_out_SYNC                   (<connected-to-vga_out_SYNC>),                   //                    .SYNC
+		.vga_out_R                      (<connected-to-vga_out_R>),                      //                    .R
+		.vga_out_G                      (<connected-to-vga_out_G>),                      //                    .G
+		.vga_out_B                      (<connected-to-vga_out_B>),                      //                    .B
+		.video_pll_ref_reset_reset      (<connected-to-video_pll_ref_reset_reset>),      // video_pll_ref_reset.reset
+		.video_ref_clk_clk              (<connected-to-video_ref_clk_clk>)               //       video_ref_clk.clk
+	);
+
